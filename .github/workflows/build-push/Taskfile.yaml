@@ -2,7 +2,12 @@ version: '3'
 
 env:
   GITHUB_TOKEN:
-    sh: gh auth token
+    sh: |
+      if [ -n "$GITHUB_TOKEN" ]; then
+        printf '%s' "$GITHUB_TOKEN"
+      else
+        gh auth token
+      fi
 
 # Notes:
 # --no-skip-checkout used for push trigger to get git tags
