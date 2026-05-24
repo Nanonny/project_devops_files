@@ -13,6 +13,6 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - name: Run Stale Action
-        uses: actions/stale@8f717f0dfca33b78d3c933452e42558e4456c8e7 # v9.1.0
+        uses: actions/stale@eb5cf3af3ac0a1aa4c9c45633dd1ae542a27a899 # v10.3.0
         with:
           days-before-stale: 30
